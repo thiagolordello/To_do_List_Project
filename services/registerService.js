@@ -6,11 +6,11 @@ const registerUserService = async (name, password) => {
 
   if(name && password == '') console.log('ta vazio');
   console.log('password:', password)
-  const ifUserexists = await Users.findOne({ where: { name, password } });
-  const ifNameOrPassexists = await Users.findOne({ where: { name } });
+  // const ifUserexists = await Users.findOne({ where: { name, password } });
+  const ifNameExists = await Users.findOne({ where: { name } });
   
-  if (ifUserexists || ifNameOrPassexists) return null;
-  
+  if (ifNameExists) return null;
+
   const result = await Users.create({
     name, password: encdodedPass,
   });

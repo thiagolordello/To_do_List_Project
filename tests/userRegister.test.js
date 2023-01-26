@@ -30,35 +30,28 @@ const notDataUserTask = {
   
 };
 
-describe('Testes POST da rotatasks register/ (Create Task)', (done) => {
+const nullDataUsrTask = {};
+
+describe('Testes POST da rota tasks register/ (Create User)', (done) => {
   let token;
-  const sendTask = async () => {
-    const response = await (await requester.post('tasks/register/').set(tokenUser).send(newTask));
-    token = response.body.token;
+  const sendNewUser = async () => {
+    const response = await (await requester.post('tasks/register/').send(newUser));
     return response;
   };
 
-  const makeLoginWithoutToken = async () => {
-    const response = await requester.post('tasks/register/').send(newUser);
-    token = response.body.token;
+ 
+  const postUserWithouthName = async () => {
+    const response = await requester.post('tasks/register/').send(notNameUser);
     return response;
   };
 
-  const postTaskWithouthIdUser = async () => {
-    const response = await requester.post('tasks/register/').set(tokenUser).send(notNameUser);
-    token = response.body.token;
+  const postUserWithouthPass = async () => {
+    const response = await requester.post('tasks/register/').send(notPasswdUser);
     return response;
   };
 
-  const postTaskWithouthDescript = async () => {
-    const response = await requester.post('tasks/register/').set(tokenUser).send(notPasswdUser);
-    token = response.body.token;
-    return response;
-  };
-
-  const postTaskWithouthStatus = async () => {
-    const response = await requester.post('tasks/register/').set(tokenUser).send(notStatusUserTask);
-    token = response.body.token;
+  const postUserWithouthData = async () => {
+    const response = await requester.post('tasks/register/').send(notDataUserTask);
     return response;
   };
 
@@ -66,33 +59,26 @@ describe('Testes POST da rotatasks register/ (Create Task)', (done) => {
   // beforeEach(async () => await sendTask());
 
   it('Retorna o status 201,quando a criacao for bem sucedida!', async () => {
-    const response = await sendTask();
-
+    const response = await sendNewUser();
     expect(response.statusCode).to.be.equal(201);
   });
+ 
 
-  it('Retorna o status 401,quando o post nao for bem sucedido (sem token)!', async () => {
-    const response = await makeLoginWithoutToken();
+  it('Quando somente a senha for informada, retorna uma mensagem de erro e o status 401', async () => {
+    const response = await postUserWithouthName();
+    expect(response.statusCode).to.be.equal(401);
+    expect(response.body.message).to.be.equal('Usuario ou senha nao informados na criacao de usuario');
+  });
+
+  it('Quando somente o nome for informado, retorna uma mensagem de erro e o status 401', async () => {
+    const response = await postUserWithouthPass();
 
     expect(response.statusCode).to.be.equal(401);
+    expect(response.body.message).to.be.equal('Usuario ou senha nao informados na criacao de usuario');
   });
 
-  it('Quando o idUser nao for informado, retorna uma mensagem de erro e o status 500', async () => {
-    const response = await postTaskWithouthIdUser();
-
-    expect(response.statusCode).to.be.equal(500);
-    expect(response.body.message).to.be.equal('notNull Violation: TasksUser.idUser cannot be null');
-  });
-
-  it('Quando a descricao nao for informada, retorna uma mensagem de erro e o status 500', async () => {
-    const response = await postTaskWithouthDescript();
-
-    expect(response.statusCode).to.be.equal(500);
-    expect(response.body.message).to.be.equal('notNull Violation: TasksUser.description cannot be null');
-  });
-
-  it('Quando o status nao for informado, retorna uma mensagem e o status 500', async () => {
-    const response = await postTaskWithouthStatus();
+  it('Quando o usuario e a senha nao foram informados, retorna uma mensagem e o status 500', async () => {
+    const response = await postUserWithouthData();
 
     expect(response.statusCode).to.be.equal(500);
     expect(response.body.message).to.be.equal('notNull Violation: TasksUser.status cannot be null');
