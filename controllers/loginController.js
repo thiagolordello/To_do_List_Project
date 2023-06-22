@@ -8,12 +8,15 @@ const userLogin = async (req, res) => {
   const encdodedPass = md5(password);
   try {
     const alreadyExist = await service.loginUser(name, encdodedPass);
-
-    if (alreadyExist === null) return res.status(404).json({ message: 'Usuário não encontrado' });
+    // console.log("alreadyExist", alreadyExist);
+    if ((name === '') && (password === ''))return res.status(400).json({ message: 'Nome e senha nao informados' });
+    if (name === '') return res.status(404).json({ message: 'Nome nao informado' });
+    if (password === '') return res.status(404).json({ message: 'Senha nao informada' });
+    if (alreadyExist === null) return res.status(404).json({ message: 'Usuário ou senha não encontrados' });
 
     return res.status(200).json(alreadyExist);
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     return res.status(500).json({ message: error.message });
   }
   /* try {

@@ -6,7 +6,7 @@ const tasksByUserContrl = async (req, res) => {
   const { id } = req.params;
   try {
     const result = await getAllTaskByUser(id);
-    return res.status(201).json(result);
+    return res.status(200).json(result);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -36,16 +36,31 @@ const putTask = async (req, res) => {
   }
 };
 
+// const deleteTask = async (req, res) => {
+  
+//   const { id } = req.params;
+//   try {
+//     const taskForRemove = await removeTask(id);
+//     if (!taskForRemove) return res.status(404).end();
+//     return res.status(204).json({ message: 'Tarefa removida com sucesso!' }).end();
+//   } catch (error) {
+//     return res.status(500).end();
+//   }
+// };
+
 const deleteTask = async (req, res) => {
   const { id } = req.params;
   try {
     const taskForRemove = await removeTask(id);
-    if (!taskForRemove) return res.status(404).end();
-    return res.status(204).json({ message: 'Tarefa removida com sucesso!' }).end();
+    if (!taskForRemove) {
+      return res.status(404).json({ message: 'Tarefa não encontrada.' });
+    }
+    return res.status(200).json({ message: 'Tarefa removida com sucesso!' });
   } catch (error) {
     return res.status(500).end();
   }
 };
+
 
 const oneTaskById = async (req, res) => {
   const { id } = req.params;
