@@ -364,5 +364,5 @@ Este projeto tem fins apenas para estudo e demonstracão como portifólio pessoa
 
 * Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construção tão inportante pra minha carreira;
 * Gostaria de agradecer primeiro a Deus por toda ajuda que tive, e segundo lugar a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
-* Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de vocês eu não teria concluido esse projeto. Portanto registro aqui meus sinceros agradecimentos a todos que me ajudaram a chegar onde cheguei. Gratidao.
+* Agradecimento tambem aos colegas de turma Alessandro Xavier, Thiago Vieira, Matheus Burthon e Rafael Scherer. Sem ajuda de vocês eu não teria concluido esse projeto. Portanto registro aqui meus sinceros agradecimentos a todos que me ajudaram a chegar onde cheguei. Gratidao.
 
