@@ -158,7 +158,12 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 
 ```Retorna o status 404,quando o login nao for bem sucedido!```
 
-  Faz uma chamada post para a rota /login enviando name e password que não existem no banco para efetuar o login. 
+  Faz uma chamada post para a rota /login enviando name e password que não existem no banco para efetuar o login.
+  
+
+```Quando o usuario informado nao for encontrado, retorna uma mensagem e o status 404```
+
+  Faz uma chamada post para a rota /login enviando name que não existe no banco e senha para efetuar o login. 
   
 
 ```Quando o nome não for informado, retorna uma mensagem e o status 404```
@@ -236,10 +241,6 @@ Todos os arquivos de teste estão no diretório '/tests' localizado na raiz do p
 ```Quando o usuário e a senha foram informados sem dados dentro (""), retorna uma mensagem e o status 400```
 
    Faz a requisição post com name e password vazios para a rota /register.
-
-```Quando o usuário e a senha não foram informados no json, retorna uma mensagem e o status 500```
-   
-   Faz a requisição post sem as chaves name e password para a rota /register.
 
 
   ### No arquivo ```taskPutOneTask.test.js"```, estão os testes referentes a rota GET /tasks/onetask/id_da_tarefa. Os casos de teste são os seguintes:
@@ -357,3 +358,4 @@ Este projeto tem fins apenas para estudo e demonstracão como portifólio pessoa
 * Aqui eu gostaria de agradecer a todos que me ajudam e me ajudaram nesta construção tão inportante pra minha carreira;
 * Gostaria de agradecer primeiro a Deus por toda ajuda que tive, e segundo lugar a minha familia que tanto me apoia nessa jornada do desenvolvimento. 🫂;
 * Agradecimento tambem aos colegas de turma Alexsandro Xavier, Thiago Vieira e Logy. Sem ajuda de vocês eu não teria concluido esse projeto. Portanto registro aqui meus sinceros agradecimentos a todos que me ajudaram a chegar onde cheguei. Gratidao.
+
