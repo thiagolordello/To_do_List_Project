@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
+    "preinstall": "node -e \"const pkg = require('./package.json'); const engines = pkg.engines || {}; const nodeVersion = engines.node; if (nodeVersion && !require('check-node-version')(nodeVersion)) { console.error('Error: Required Node.js version ' + nodeVersion + ' not satisfied.'); process.exit(1); }\"",
     "test": "mocha tests/**/*.test.js --exit",
     "start": "node index.js",
     "drop": "npx sequelize db:drop",
