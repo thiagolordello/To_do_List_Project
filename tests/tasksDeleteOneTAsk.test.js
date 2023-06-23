@@ -23,7 +23,7 @@ describe('Testes DELETE da rota /idTask', (done) => {
   // let idUser
 
   const sendReqTasksByUser = async (tkn) => {
-    const response = await (requester.delete('/tasks/22/').set(tkn));
+    const response = await (requester.delete('/tasks/10/').set(tkn));
     token = response.body.token;
     // const idUser = response.body.idUser;
     return response;

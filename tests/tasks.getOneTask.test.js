@@ -12,7 +12,7 @@ const tokenBadUser = { Authorization: '123456' };
 const notToken = {};
 const tokenUser = { Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoibG9yZGVsbG8iLCJpZCI6NSwiaWF0IjoxNjg2MTUwNTg4LCJleHAiOjE2OTM5MjY1ODh9.ebwAC216l0FR7mE_7u41ocDsH0UrjGl7HksUlJirha0' };
 const oneTasksUser = {
-  id: 11,
+  id: 1,
   idUser: 5,
   description: 'refazer o back end',
   status: 'concluido',
@@ -23,7 +23,7 @@ describe('Testes GET da rota /tasks/onetask/idTask', (done) => {
   let token;
 
   const reqOneTaskById = async (tkn) => {
-    const response = await (requester.get('/tasks/onetask/11').set(tkn));
+    const response = await (requester.get('/tasks/onetask/1').set(tkn));
     return response;
   };
 

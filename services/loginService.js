@@ -16,6 +16,7 @@ const loginUser = async (nameUser, passwordUser) => {
     name,
     /* password, */
     token: jwt,
+    id
   };
 };
 

@@ -11,13 +11,13 @@ const requester = chai.request(app).keepOpen();
 const tokenUser = { Authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiam9hbyIsImlkIjo0LCJpYXQiOjE2ODAzNDcwMTUsImV4cCI6MTY4ODEyMzAxNX0.eOQGXxXl_f1RtQfksbQ6TYHKP1Zo_WKVXp2LcC6QDtw' };
 
 const newTask = {
-  idUser: 4,
+  idUser: 6,
   description: 'Correr de manha',
   status: 'Pendente',
 };
 
 const userTask = {
-  idUser: 4,
+  idUser: 6,
   description: 'Correr de manha',
   status: 'Pendente',
 };
@@ -29,12 +29,12 @@ const notIdUserTask = {
 };
 
 const notDescripUserTask = {
-  idUser: 4,
+  idUser: 6,
   status: 'Pendente',
 };
 
 const notStatusUserTask = {
-  idUser: 4,
+  idUser: 6,
   description: 'Correr de manha',
 };
 
