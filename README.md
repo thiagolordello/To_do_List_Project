@@ -132,7 +132,7 @@ A rota DELETE '/:id' utilizamos para deletar uma tarefa com base no id informado
 Para a estrutura desse projeto, foram idealizadas duas entidades relacionais onde estão dispostas as informaçoes do sistema . Na entidade users armazemanos as informações de cadastro dos usuários como name e password. Na entidade tasks_user, temos as informações diretamente ligadas as tarefas como a descrição, o status e a data de criação (createdAt), alem do id_user que referencia a que usuário a tarefa pertence.   
 Para a construcão da API utlizamos a tecnologia ORM Sequelize na orquestração do banco de dados MySql
 
-![image](https://github.com/thiagolordello/todolist_backend/assets/20212304/aebf89eb-f2b6-47b3-9800-2268db43452c)
+<p align="center">![image](https://github.com/thiagolordello/todolist_backend/assets/20212304/aebf89eb-f2b6-47b3-9800-2268db43452c)</p>
 
 ## ⚙️ Executando os testes
 
