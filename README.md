@@ -81,7 +81,7 @@ Na rota POST '/login', fazemos a criação de um usuário, informando um JSON co
 
 ```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
 
- <div style="color": blue>Para realizar o login e testar aplicação utilize o usuario: victor e senha 123456. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.</div> 
+ Para realizar o login e testar aplicação utilize o usuario: victor e senha 123456. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.
 
 ![Captura de tela de 2023-06-02 15-17-47](https://github.com/thiagolordello/todolist_backend/assets/20212304/bd64288b-de60-45c4-967b-6b4e79c39709)
 
