@@ -37,7 +37,7 @@ const putTask = async (req, res) => {
 };
 
 // const deleteTask = async (req, res) => {
-  
+
 //   const { id } = req.params;
 //   try {
 //     const taskForRemove = await removeTask(id);
@@ -60,7 +60,6 @@ const deleteTask = async (req, res) => {
     return res.status(500).end();
   }
 };
-
 
 const oneTaskById = async (req, res) => {
   const { id } = req.params;
