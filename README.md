@@ -56,6 +56,8 @@ npm run seed
 
 #### Atenção!
 
+*Para realizar o login e testar aplicação utilize o usuario: victor e senha 123456. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.*
+
 Para prosseguir com a utilização das rotas, você poderá optar por utilizar a aplicação em nuvem (ambiente já disponível e não precisa de instalação) ou em ambiente local (precisará instalar as dependências na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, elas estão com o apontamento local 'localhost'. Caso sua escolha seja fazer direto na API em nuvem, basta substituir o início de cada chamada, trocando o trecho  ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
 
 Exemplo : 
@@ -80,8 +82,7 @@ Na rota post '/register', fazemos a criação de um usuário informando um json 
 Na rota POST '/login', fazemos a criação de um usuário, informando um JSON com as chaves "name" e "password" no corpo da requisição, contendo os valores de nome de usuário e senha. Todas as rotas, assim como o token gerado no login, contam com middlewares de erro para o caso de chamadas indevidas. Se a requisição for bem-sucedida, a API retornará o token, que é pré-requisito para as demais requisições. Portanto, assim que efetuar a requisição de login, copie a chave "token" para que possa usá-la nas próximas requisições. Como o nome sugere, este endpoint efetua o login fornecendo "name" e "password" no momento da requisição. Deve ser informado no body um json com as chaves name e password contendo os valores do nome do usuário a criar e a senha. Se a requisição for bem sucedida a api retornará um ```status code 200```. Caso não seja bem sucedida, retornará outro código com a mensagem do erro corespondente.
 
 ```localhost:3001/login"``` ou pela nuvem ```https://to-do-list-backend-production-0a07.up.railway.app/tasks/login```
-
- *Para realizar o login e testar aplicação utilize o usuario: victor e senha 123456. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.*
+ 
 
 ![Captura de tela de 2023-06-02 15-17-47](https://github.com/thiagolordello/todolist_backend/assets/20212304/bd64288b-de60-45c4-967b-6b4e79c39709)
 
