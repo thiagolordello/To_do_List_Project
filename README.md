@@ -56,7 +56,7 @@ npm run seed
 
 #### Atenção!
 
-*Para realizar o login e testar aplicação utilize o usuario: victor e senha 123456. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.*
+*Para realizar o login e testar aplicação utilize o ```usuario: victor e senha: 123456```. Não há como obter diretamente a senha pelo banco de dados pois como medida de segurança a coluna senha está com os dados criptografados.*
 
 Para prosseguir com a utilização das rotas, você poderá optar por utilizar a aplicação em nuvem (ambiente já disponível e não precisa de instalação) ou em ambiente local (precisará instalar as dependências na raiz do projeto "/todolist_backend"). Nos exemplos de chamadas abaixo, elas estão com o apontamento local 'localhost'. Caso sua escolha seja fazer direto na API em nuvem, basta substituir o início de cada chamada, trocando o trecho  ```localhost:3001/"``` por ```https://to-do-list-backend-production-0a07.up.railway.app/"``` em cada chamada que for utilizar. 
 
