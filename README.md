@@ -37,11 +37,10 @@ npm run debug
   Se a aplicação tiver sido iniciada corretamente, haverá a seguinte mensagem ao iniciar      o serviço: 
    'starting `node index.js  Executando na porta 3001'. Em caso de erro repita o processo.
 
- Atenção! 
- 
-   Para que as etapas seguintes (configuração do banco de dados) tenham sucesso, será necessário apontar as variávies de ambiente de acordo com as configurações informadas por você no momento de instalação do seu mySql. Estas variávies ficam no arquivo ```.env``` localizado na raiz do projeto. Caso este arquivo não seja preenchido com as informações do se banco os comandos seguintes será exibido erros e a aplicação não funcionará.  
 
-4. Com o serviço do MySql em execução, execute os scripts do sequelize para a criação do banco:
+ 4.  Para que as etapas seguintes (configuração do banco de dados) tenham sucesso, será necessário apontar as variávies de ambiente de acordo com as configurações informadas por você no momento de instalação do seu mySql. Estas variávies ficam no arquivo ```.env``` localizado na raiz do projeto. Caso este arquivo não seja preenchido com as informações do se banco os comandos seguintes será exibido erros e a aplicação não funcionará.  
+
+5. Com o serviço do MySql em execução, execute os scripts do sequelize para a criação do banco:
 ```
 npm run setdb
 ```  
